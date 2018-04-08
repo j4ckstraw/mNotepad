@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/if_about-info-information_2931180.ico</file>
+        <file>icons/if_copy-duplicate-multiply-clone_2931153.ico</file>
+        <file>icons/if_folder-storage-files_2931141.ico</file>
+        <file>icons/if_paste-clipboard-copy_2931174.ico</file>
+        <file>icons/if_plus-add-new-create-attach-maximize_2931155.ico</file>
+        <file>icons/if_reload-refresh-arrow-repeat_2937371.ico</file>
+        <file>icons/if_reload-refresh-repeat-arrow_2937372.ico</file>
+        <file>icons/if_save-guardar-diskette_2931176.ico</file>
+        <file>icons/if_trash-delete-remove_2931168.ico</file>
+        <file>icons/if_cut-scissor-clippers-shear_2931169.ico</file>
+    </qresource>
+</RCC>
