@@ -8,6 +8,8 @@
 #include <QFontDialog>
 #include <QColor>
 #include <QColorDialog>
+#include <QPrinter>
+#include <QPrintDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -126,4 +128,13 @@ void MainWindow::on_actionText_Color_triggered()
     QColor color = QColorDialog::getColor(Qt::white, this, "Set Text Color");
     if (color.isValid())
         ui->textEdit->setTextColor(color);
+}
+
+void MainWindow::on_actionPrint_triggered()
+{
+    QPrinter printer;
+    printer.setPrinterName("printer name");
+    QPrintDialog dialog(&printer,this);
+    if (dialog.exec() == QDialog::Rejected) return;
+    ui->textEdit->print(&printer);
 }
