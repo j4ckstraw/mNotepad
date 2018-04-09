@@ -4,6 +4,8 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QTextStream>
+#include <QFont>
+#include <QFontDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -107,3 +109,12 @@ void MainWindow::on_actionQuit_triggered()
     close();
 }
 
+void MainWindow::on_actionFont_triggered()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok,this);
+    if (ok)
+        ui->textEdit->setFont(font);
+    else
+        return;
+}
