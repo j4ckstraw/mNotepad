@@ -6,6 +6,8 @@
 #include <QTextStream>
 #include <QFont>
 #include <QFontDialog>
+#include <QColor>
+#include <QColorDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -117,4 +119,11 @@ void MainWindow::on_actionFont_triggered()
         ui->textEdit->setFont(font);
     else
         return;
+}
+
+void MainWindow::on_actionText_Color_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this, "Set Text Color");
+    if (color.isValid())
+        ui->textEdit->setTextColor(color);
 }
